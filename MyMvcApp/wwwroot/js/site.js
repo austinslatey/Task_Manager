@@ -49,14 +49,11 @@ function removeColumn(button) {
 
 function saveColumn(element) {
   var columnId = element.id;
-  
+
   // Save the entire HTML content of the column
-  var columnData = element.parentElement.outerHTML; 
+  var columnData = element.parentElement.outerHTML;
   localStorage.setItem(columnId, columnData);
 }
-
-
-
 
 
 function loadColumns() {
@@ -72,3 +69,42 @@ function loadColumns() {
     }
   }
 }
+
+
+
+
+function openTaskModal(columnId) {
+  // Set the column ID in the hidden input field
+  document.getElementById('columnId').value = columnId;
+}
+
+function saveTask() {
+  // Retrieve the task data from the form
+  var taskTitle = document.getElementById('taskTitle').value;
+  var taskDescription = document.getElementById('taskDescription').value;
+  var columnId = document.getElementById('columnId').value;
+
+  // Create HTML elements for the task
+  var taskElement = document.createElement('div');
+  taskElement.className = 'task'; // Add the 'task' class to style differently
+  taskElement.innerHTML = `
+      <h4>${taskTitle}</h4>
+      <p>${taskDescription}</p>
+  `;
+
+  // Append the task to the corresponding column
+  var column = document.getElementById(columnId);
+  column.appendChild(taskElement);
+
+  // Close the modal
+  var modal = document.getElementById('taskModal');
+  var modalInstance = bootstrap.Modal.getInstance(modal);
+  modalInstance.hide();
+}
+
+// Event listener for the "+" button to open the modal
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('saveTask')) {
+    addTask(event.target);
+  }
+});

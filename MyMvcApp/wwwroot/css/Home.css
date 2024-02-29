@@ -17,6 +17,14 @@
   width: 2rem;
 }
 
+.task {
+  background-color: black;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: auto auto auto;

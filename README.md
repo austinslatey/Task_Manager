@@ -17,4 +17,4 @@
 - Run the Application
 The way I run my application locally for Hot Module Replacement (HMR)
 
-`dotnet watch run --project MyWebApp` 
+`dotnet watch run --project MyMvcApp` 

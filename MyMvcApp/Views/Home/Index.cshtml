@@ -1,36 +1,35 @@
 ﻿@{
-  ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Kanban Board";
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/Home.css" />
+  <link rel="stylesheet" href="~/css/Home.css" />
 }
 
+<p>Create Tasks</p>
+<button onclick="addColumn()">Add Column</button>
 
-<div class="text-center">
-  <h1 class="display-4">Create Tasks</h1>
+<div class="container bg-dark text-center" id="kanbanBoard">
+  <div class="col border">
+    <h3>Potential Ideas:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+  </div>
+  <div class="col border">
+    <h3>Notes:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+  </div>
 
-  <div class="container bg-dark text-light text-center">
-    <div class="col border">
-      <h3>Potential Ideas:</h3>
-      <button class="bg-secondary text-light rounded">+</button>
-    </div>
-    <div class="col border">
-      <h3>Notes:</h3>
-      <button class="bg-secondary text-light rounded">+</button>
-    </div>
-
-    <div class="col border">
-      <h3>To Do:</h3>
-      <button class="bg-secondary text-light rounded">+</button>
-    </div>
-    <div class="col border">
-      <h3>Doing:</h3>
-      <button class="bg-secondary text-light rounded">+</button>
-    </div>
-    <div class="col border">
-      <h3>Done:</h3>
-      <button class="bg-secondary text-light rounded">+</button>
-    </div>
+  <div class="col border">
+    <h3>To Do:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+  </div>
+  <div class="col border">
+    <h3>Doing:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+  </div>
+  <div class="col border">
+    <h3>Done:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
   </div>
 </div>
+

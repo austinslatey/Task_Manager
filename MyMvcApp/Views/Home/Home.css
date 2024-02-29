@@ -1,0 +1,31 @@
+/* styles.css */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.col {
+  min-height: 10rem;
+  padding: 1rem;
+}
+
+.col h3 {
+  margin-top: 0;
+}
+
+.col button {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

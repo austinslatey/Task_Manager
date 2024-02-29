@@ -10,6 +10,20 @@
 <button onclick="addColumn()">Add Column</button>
 
 <div class="container bg-dark text-center" id="kanbanBoard">
-   @* columns go here *@
+  <div class="col border">
+    <h3 contenteditable="true" onblur="saveColumn(this)" id="column1" >To Do:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+    <button class="bg-danger text-light rounded" onclick="removeColumn(this)">x</button>
+  </div>
+  <div class="col border">
+    <h3 contenteditable="true" onblur="saveColumn(this)" id="column2">Doing:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+    <button class="bg-danger text-light rounded" onclick="removeColumn(this)">x</button>
+  </div>
+  <div class="col border">
+    <h3 contenteditable="true" onblur="saveColumn(this)" id="column3">Done:</h3>
+    <button class="bg-secondary text-light rounded">+</button>
+    <button class="bg-danger text-light rounded" onclick="removeColumn(this)">x</button>
+  </div>
+  @* dynamic columns go here *@
 </div>
-

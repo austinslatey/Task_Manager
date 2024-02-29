@@ -11,7 +11,7 @@
 
 <div class="container bg-dark text-center" id="kanbanBoard">
   <div class="col border">
-    <h3 contenteditable="true" onblur="saveColumn(this)" id="column1" >To Do:</h3>
+    <h3 contenteditable="true" onblur="saveColumn(this)" id="column1">To Do:</h3>
     <button class="bg-secondary text-light rounded">+</button>
     <button class="bg-danger text-light rounded" onclick="removeColumn(this)">x</button>
   </div>
@@ -26,4 +26,6 @@
     <button class="bg-danger text-light rounded" onclick="removeColumn(this)">x</button>
   </div>
   @* dynamic columns go here *@
+  <div class="container" id="dynamicColumns"></div>
+
 </div>

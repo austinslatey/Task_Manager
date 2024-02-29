@@ -13,5 +13,10 @@ function addColumn() {
 
 // removes column for kanban
 function removeColumn(button) {
-  button.parentNode.remove();
+  let confirmed = confirm("Are you sure you want to delete?");
+  if (confirmed) {
+    // Removes the parent node (column div) from the DOM
+    button.parentNode.remove();
+  }
+
 }
